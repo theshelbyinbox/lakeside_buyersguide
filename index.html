@@ -7,7 +7,7 @@
 <meta name="description" content="The Lakeside Motel & RV Park in Christmas Valley, Oregon is for sale — ten remodeled lakefront rooms, thirty-one RV spaces, a commercial kitchen, and a complete operating system built over seven years.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Hanken+Grotesk:wght@400;500;600&family=Caveat:wght@500&display=swap" rel="stylesheet">
 <style>
 /* ============ WARM EDITORIAL SYSTEM — THE LAKESIDE ============ */
 :root{
@@ -274,6 +274,49 @@ nav .nav-links a:hover,nav .nav-links a.active{background:var(--ochre);color:var
 .body-copy{max-width:62ch;margin:0 auto;text-align:center;}
 .body-copy p+p{margin-top:22px;}
 
+/* ---- handwritten scribble ---- */
+.scribble{
+  font-family:'Caveat',cursive;
+  font-size:30px;
+  color:var(--ochre);
+  transform:rotate(-4deg);
+  display:inline-block;
+  margin-top:18px;
+}
+
+/* ============ SECTION 4.5 — THE RESTAURANT YEARS ============ */
+.rest-grid{
+  grid-template-columns:repeat(4,1fr);
+  grid-auto-rows:250px;
+  margin-top:72px;
+}
+.rest-grid .g-big{grid-column:span 2;grid-row:span 2;}
+.rest-grid .g-wide{grid-column:span 2;}
+.rest-grid .chip{bottom:14px;left:14px;}
+@media(max-width:1000px){
+  .rest-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:560px){
+  .rest-grid{grid-template-columns:1fr;grid-auto-rows:300px;}
+  .rest-grid .g-big,.rest-grid .g-wide{grid-column:auto;grid-row:auto;}
+}
+
+/* ============ FAQ ============ */
+.faq-list{max-width:760px;margin:64px auto 0;}
+.faq-item{
+  border:1px solid var(--sand);
+  border-radius:14px;
+  background:var(--offwhite);
+  padding:30px 32px;
+  text-align:left;
+}
+.faq-item+.faq-item{margin-top:14px;}
+.faq-item h3{
+  font-family:var(--serif);font-weight:400;
+  font-size:24px;letter-spacing:-0.02em;
+}
+.faq-item p{margin-top:10px;font-size:16px;line-height:1.55;}
+
 /* ============ SECTION 3 — WHAT WE FOUND ============ */
 .found-grid{
   grid-template-columns:1.15fr 1fr 1fr;
@@ -500,10 +543,10 @@ footer .fnav a:hover{color:var(--cream);}
   </a>
   <div class="nav-links">
     <a href="#top" class="active">Home</a>
-    <a href="#" title="Coming soon">The Property</a>
-    <a href="#" title="Coming soon">How It Runs</a>
-    <a href="#" title="Coming soon">What It Could Be</a>
-    <a href="#" title="Coming soon">The Setting</a>
+    <a href="#found" data-note="deep-dive page coming later">The Property</a>
+    <a href="#runs" data-note="deep-dive page coming later">How It Runs</a>
+    <a href="#couldbe" data-note="deep-dive page coming later">What It Could Be</a>
+    <a href="#setting" data-note="deep-dive page coming later">The Setting</a>
     <a href="#contact">Details &amp; Contact</a>
   </div>
   <button class="menu-btn" id="menuBtn" aria-label="Open menu">Menu</button>
@@ -511,10 +554,10 @@ footer .fnav a:hover{color:var(--cream);}
 <div class="menu-overlay" id="menuOverlay">
   <button class="menu-close" id="menuClose">Close</button>
   <a href="#top" style="transition-delay:0.08s">Home</a>
-  <a href="#" style="transition-delay:0.14s" title="Coming soon">The Property</a>
-  <a href="#" style="transition-delay:0.20s" title="Coming soon">How It Runs</a>
-  <a href="#" style="transition-delay:0.26s" title="Coming soon">What It Could Be</a>
-  <a href="#" style="transition-delay:0.32s" title="Coming soon">The Setting</a>
+  <a href="#found" style="transition-delay:0.14s">The Property</a>
+  <a href="#runs" style="transition-delay:0.20s">How It Runs</a>
+  <a href="#couldbe" style="transition-delay:0.26s">What It Could Be</a>
+  <a href="#setting" style="transition-delay:0.32s">The Setting</a>
   <a href="#contact" style="transition-delay:0.38s">Details &amp; Contact</a>
 </div>
 
@@ -525,16 +568,16 @@ footer .fnav a:hover{color:var(--cream);}
   <span class="chip">Baert Lake — Sunrise</span>
   <div class="hero-content">
     <p class="eyebrow on-photo reveal">Christmas Valley, Oregon — On the Bank of Baert Lake</p>
-    <h1 class="reveal" style="--d:0.12s">A finished restoration.<br>An unwritten <em>next</em> chapter.</h1>
+    <h1 class="reveal" style="--d:0.12s">The restoration is done.<br>The good part is <em>yours</em>.</h1>
   </div>
 </header>
 
 <section class="hero-deck">
   <div class="narrow center">
-    <p class="lede reveal">The Lakeside Motel &amp; RV Park is for sale — ten remodeled lakefront rooms, thirty-one RV spaces, a commercial kitchen, and a complete operating system built over seven years by the family that restored it.</p>
+    <p class="lede reveal">You want a lakefront property that actually runs, not a project. I'm sure you've read enough listings to know what &ldquo;has potential&rdquo; really means. The Lakeside is the other thing: ten remodeled rooms on the bank of Baert Lake, 26 RV spaces, a restaurant with a commercial kitchen, and a 116-page manual that tells you exactly how all of it works. We did most of the project part over the last seven years and just wait until you see the transformation(sss)!!</p>
     <div class="hero-ctas reveal" style="--d:0.15s">
-      <a class="btn" href="#swather">Read the Story</a>
-      <a class="textlink" href="#contact">Begin the Conversation</a>
+      <a class="btn" href="#swather">Read How We Got Here</a>
+      <a class="textlink" href="#contact">Start the Conversation</a>
     </div>
   </div>
 </section>
@@ -545,11 +588,13 @@ footer .fnav a:hover{color:var(--cream);}
 <section class="section swather" id="swather">
   <div class="narrow center">
     <p class="eyebrow reveal">Fall 2019 — How It Started</p>
-    <h2 class="reveal" style="--d:0.1s;margin-top:22px;">It started with my mom <em>on</em> a swather.</h2>
+    <h2 class="reveal" style="--d:0.1s;margin-top:22px;">It all started with my mom <em>on</em> a swather.</h2>
     <div class="body-block reveal" style="--d:0.18s;margin-top:36px;">
-      <p>She'd been out cutting hay too long with nothing but her own thoughts, and she texted me a question: would I ever want to live in Christmas Valley if I had my own business to run? A week later, sitting at the post office, she mentioned the Lakeside was for sale — and had been for a while.</p>
-      <p>Everybody in town had circled it. Nobody had jumped.</p>
+      <p>She'd been out cutting hay all day. And if you've never done the farming thing.. the thoughts going through your head while you're sitting in a tractor driving circles around a field for hours at a time are kind of like shower thoughts... except on steroids — who knows what the heck kind of crazy ideas you might dream up while you're out there!</p>
+      <p>That day, her crazy swather idea landed in my text messages. She asked, &ldquo;Do you think you'd ever want to move back to Christmas Valley if you had your own coffee shop to run out here or something?&rdquo;</p>
+      <p>We went from crazy swather idea to hearing the Lakeside was up for sale to okay wait.. are we being serious about this?? To signing papers — all in about 1.5 months!</p>
       <p class="keys-line">We got the keys January 1st, 2020.</p>
+      <p class="scribble">well that escalated quickly ....</p>
     </div>
     <figure class="photo-card reveal" style="--d:0.22s">
       <img src="assets/keys-day-one.jpg" alt="The family on day one, holding the keys — it's officially official">
@@ -565,10 +610,13 @@ footer .fnav a:hover{color:var(--cream);}
       <p class="eyebrow reveal">January 2020 — The Honest Before</p>
       <h2 class="reveal" style="--d:0.1s;margin-top:22px;">Nobody would ever call it <em>easy</em>.</h2>
       <div class="body-copy reveal" style="--d:0.18s;margin-top:36px;">
-        <p>My dad didn't sugarcoat it: there were definite issues, and lots of things that needed fixed. Peaked ceiling beams stained an ugly red. Tired carpet everywhere. Motel rooms that were old and musty, with window box AC units and infrastructure dating back to the 1960s. That first winter, the restaurant roof had more than five leaks going at once.</p>
-        <p class="standout">We set out buckets.</p>
-        <p>But underneath all of it: the Lakeside sits right on the bank of the lake. Guests wake up to geese and ducks, the pelicans come through every year, and the sunrises off that water are something no other property around can offer. It was the only motel and RV park directly in Christmas Valley — the reason it had survived when everything else cycled through owners or closed.</p>
-        <p class="standout">It wasn't failing. It was waiting for a family to care about it.</p>
+        <p>My dad walked through the Lakeside before we bought it and while yes there were aesthetic issues all around, the problems went a lot deeper than that (which in typical fashion, we only REALLY understood how deep those problems went after we'd started ripping the sheetrock off of the walls — no turning back at that point!) The whole property was running on infrastructure from the 1960s, the year it was BUILT.</p>
+        <p>Our first winter, the restaurant roof had at least 5 leaks going on at the same time whenever it rained or the snow melted.</p>
+        <p class="standout">We put out buckets. Many of them.</p>
+        <p>But let me be clear about something —</p>
+        <p>It's not that the previous owners had failed it — opposite, actually. They ran the Lakeside (then called the Lakeside Terrace) faithfully and successfully for 25 years! Their way was simple: keep it old-fashioned, skip the renovations, and just run their little mom-and-pop. It worked for a quarter of a century, and we mean that with real admiration.</p>
+        <p>If we're being honest, that's the whole difference between their 25 years and our project-heavy 7: they ran it. We rebuilt it. (More on what that means for you — and the books — in a minute.)</p>
+        <p class="standout">The Lakeside didn't need rescuing. It needed updating. That's the part we came to do, and DO we did.</p>
       </div>
     </div>
     <div class="grid found-grid">
@@ -585,9 +633,11 @@ footer .fnav a:hover{color:var(--cream);}
   <div class="wrap">
     <div class="narrow center">
       <p class="eyebrow reveal">2020–2022 — The Family Rebuild</p>
-      <h2 class="reveal" style="--d:0.1s;margin-top:22px;">Gutted to the studs. Rebuilt <em>together</em>.</h2>
+      <h2 class="reveal" style="--d:0.1s;margin-top:22px;">We gutted the restaurant on day <em>one</em>.</h2>
       <div class="body-copy reveal" style="--d:0.18s;margin-top:36px;">
-        <p>The very first day we owned it, we walked into the restaurant and gutted it. Completely. Sheetrock off, new insulation, new flooring — remodeled top to bottom in about a month and a half. My grandpa hand-painted trim for hours. My sister Emily led the design and picked out the chandeliers. Those ugly red beams went almost-black, and the whole room finally made sense. People who knew the old place would walk in and just say, &ldquo;Whoa.&rdquo;</p>
+        <p>Literally day one. Walked in with the keys, started pulling sheetrock off the walls, realizing the whole thing needed new insulation, all new flooring, remodeled top to bottom in about a month and a half. My grandpa hand-painted trim for hours. My sister-in-law was the design mastermind — she picked out the chandeliers. Those only kinda-half-painted wood paneled walls and torn to shreds carpet turned into a beautifully designed, modern masterpiece! (if you ask me) The whole room finally made sense.</p>
+        <p>People who knew the old place (every person in Christmas Valley) would walk in and just say, &ldquo;Whoa.&rdquo;</p>
+        <p class="standout">That was the winter of 2020.</p>
       </div>
     </div>
     <div class="grid work-grid">
@@ -598,15 +648,10 @@ footer .fnav a:hover{color:var(--cream);}
     </div>
     <div class="narrow center">
       <div class="body-copy reveal">
-        <p>Then we spent two years doing the same to the motel — every room gutted down to the studs and rebuilt from the floor up. In spring 2020 my parents repainted the entire exterior themselves, scraping loose paint by hand, borrowing a lift for the peaks. My mom texted me from the ladder:</p>
-      </div>
-    </div>
-    <div class="quote-block">
-      <p class="pullquote reveal">&ldquo;It's almost hot out here painting and we are <em>loving</em> it.&rdquo;</p>
-    </div>
-    <div class="narrow center">
-      <div class="body-copy reveal">
-        <p>The hardest work was the invisible kind. When we opened up the RV bathhouse we found rotted boards, hidden mold, and no ventilation — so we fixed what nobody would ever see, and added fans so it would stay fixed. When the drain field's old steel corroded in 2024, rebuilding it consumed most of that year's cash. We did it right anyway. That's the kind of place you're buying.</p>
+        <p>We spent the next two winters doing the same thing to the motel rooms — every room gutted to the studs and rebuilt from the floor up. One of those springs in between my mom repainted the entire exterior restaurant building herself. The next fall we painted the exterior of each motel building. The entire roof on both the restaurant and motel were replaced. A brand new lawn went in somewhere in between all of that.</p>
+        <p>Eventually we got to the bathhouse remodel. It needed it SOOO bad. When we opened up the RV bathhouse we found more rotten boards than good ones, hidden mold, and zero ventilation, so of course we added fans and ventilation to keep that problem from happening again.</p>
+        <p>We replaced the septic system for the restaurant, then the motel septic a couple years later, and then, when the very old steel drain field in the RV Park corroded in 2024, that was rebuilt too, for a very pretty penny, but we did it right anyway.</p>
+        <p class="standout">That's the kind of place you're buying. The receipts are in a binder.</p>
       </div>
     </div>
     <div class="payoff">
@@ -616,14 +661,39 @@ footer .fnav a:hover{color:var(--cream);}
   </div>
 </section>
 
-<!-- ============ SECTION 5 — WHAT GUESTS SAY ============ -->
-<section class="section panel" id="guests">
+<!-- ============ SECTION 4.5 — THE RESTAURANT YEARS ============ -->
+<section class="section panel" id="restaurant">
   <div class="wrap">
     <div class="narrow center">
-      <p class="eyebrow reveal">1,300+ Feedback Cards and Reviews</p>
+      <p class="eyebrow reveal">2020–2023 — The Restaurant Years</p>
+      <h2 class="reveal" style="--d:0.1s;margin-top:22px;">For three years, this was <em>the</em> place in town.</h2>
+      <div class="body-copy reveal" style="--d:0.18s;margin-top:36px;">
+        <p>We didn't just rebuild the restaurant — we ran it. Breakfast plates before work. Burgers and fries at lunch. Cinnamon rolls next to a Lakeside mug. Milkshakes shared in a booth. It was the only diner in town, it was busy, and the crew who ran it with us became family.</p>
+        <p>We ran it successfully for three years — right up until I burnt out. (Rebuilding a motel and running a restaurant at the same time will do that.) That's the honest version, and it's also the whole point of the &ldquo;What It Could Be&rdquo; section further down: the kitchen, the equipment, and the demand are all still here, waiting for someone whose energy is fresh.</p>
+        <p class="standout">Mostly, though? People just loved it here. They still do.</p>
+      </div>
+    </div>
+    <div class="grid rest-grid">
+      <figure class="photo-card fill g-big reveal"><img src="assets/group-event-dining.jpg" alt="A full house at a group dinner in the dining room"><span class="chip">Full House</span></figure>
+      <figure class="photo-card fill reveal" style="--d:0.08s"><img src="assets/burger-fries.jpg" alt="A burger and fries from the Lakeside kitchen"><span class="chip">From the Kitchen</span></figure>
+      <figure class="photo-card fill reveal" style="--d:0.16s"><img src="assets/cinnamon-roll-mug.jpg" alt="A cinnamon roll next to a Lakeside mug"><span class="chip">Sunday Mornings</span></figure>
+      <figure class="photo-card fill g-wide reveal" style="--d:0.24s"><img src="assets/restaurant-crew.jpg" alt="The restaurant crew together"><span class="chip">Family, Basically</span></figure>
+      <figure class="photo-card fill g-wide reveal"><img src="assets/staff-counter.jpg" alt="Smiling staff at the counter"><span class="chip">The Crew</span></figure>
+      <figure class="photo-card fill reveal" style="--d:0.08s"><img src="assets/breakfast-plate.jpg" alt="A breakfast plate of eggs and bacon"><span class="chip">Breakfast Rush</span></figure>
+      <figure class="photo-card fill reveal" style="--d:0.16s"><img src="assets/couple-milkshakes.jpg" alt="A couple sharing milkshakes"><span class="chip">Two Straws</span></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 5 — WHAT GUESTS SAY ============ -->
+<section class="section" id="guests">
+  <div class="wrap">
+    <div class="narrow center">
+      <p class="eyebrow reveal">Feedback and Reviews from 1,300 Guests</p>
       <h2 class="reveal" style="--d:0.1s;margin-top:22px;">Our guests kept the <em>receipts</em>.</h2>
       <div class="body-copy reveal" style="--d:0.18s;margin-top:36px;">
-        <p>Across more than 1,300 feedback cards and reviews, 94% of guests rate their stay excellent or good. The number one thing they mention — over 400 times — is cleanliness: &ldquo;spotless,&rdquo; &ldquo;cleanest motel I've stayed in.&rdquo; Right behind it are the lake and the wildlife, and words like &ldquo;peaceful&rdquo; and &ldquo;serene.&rdquo; Nearly a third of our guests are repeat visitors.</p>
+        <p>We don't have to guess what people think of the Lakeside — we have Google reviews and guest filled feedback forms that span the past 6+ years, over 1,300 opinions from guests telling us what they love and what they didn't love. 94% rate their stay as Excellent or Good. The number one thing they mention, over 400 times, is cleanliness: &ldquo;spotless,&rdquo; &ldquo;cleanest motel I've stayed in&rdquo; — People are often surprised when they walk in their room at the Lakeside — the rooms feel like a modern, well designed hotel room — not your typical musty, outdated motel room at all.</p>
+        <p>And then right out their door: the lake, the wildlife, the wide open nature. Words like &ldquo;peaceful&rdquo; and &ldquo;serene&rdquo; show up on those feedback cards on repeat as well. Nearly a third of our guests are repeat visitors.</p>
       </div>
     </div>
     <div class="stats-block reveal">
@@ -653,20 +723,26 @@ footer .fnav a:hover{color:var(--cream);}
       <figure class="photo-card fill reveal"><img src="assets/couple-dog-room3.jpg" alt="A couple and their dog outside Room 3"><span class="chip">Room 3</span></figure>
       <figure class="photo-card fill reveal" style="--d:0.08s"><img src="assets/kids-geese-lake.jpg" alt="Kids feeding the geese at the lake"><span class="chip">The Morning Regulars</span></figure>
       <figure class="photo-card fill reveal" style="--d:0.16s"><img src="assets/room-shiplap.jpg" alt="A remodeled room with shiplap and lake art"><span class="chip">Remodeled — Every Room</span></figure>
+      <figure class="photo-card fill reveal"><img src="assets/couple-map-picnic.jpg" alt="A couple planning over a map at a picnic table"><span class="chip">Planning Tomorrow</span></figure>
+      <figure class="photo-card fill reveal" style="--d:0.08s"><img src="assets/planning-trip-coffee.jpg" alt="Planning a trip over a map and coffee"><span class="chip">Coffee + a Map</span></figure>
+      <figure class="photo-card fill reveal" style="--d:0.16s"><img src="assets/guests-walking-dog.jpg" alt="Guests walking with their dog"><span class="chip">The Evening Loop</span></figure>
     </div>
   </div>
 </section>
 
 <!-- ============ SECTION 6 — HOW IT RUNS ============ -->
-<section class="section" id="runs">
+<section class="section panel" id="runs">
   <div class="wrap">
     <div class="narrow center">
       <p class="eyebrow reveal">The Operating System</p>
-      <h2 class="reveal" style="--d:0.1s;margin-top:22px;">It came with index cards. It leaves with a <em>manual</em>.</h2>
+      <h2 class="reveal" style="--d:0.1s;margin-top:22px;">It came with instructions that could fit on an index card. It leaves with an <em>owners manual</em>.</h2>
       <div class="body-copy reveal" style="--d:0.18s;margin-top:36px;">
-        <p>When I took over in 2020, everything I was told about running this place fit on the back of a few index cards and an envelope. I turned that into a complete operating system: a 116-page manual covering the whole property, screen-recorded step-by-step walkthroughs, housekeeping checklists with room timers, a freeze protocol for hard winters, templated guest check-in texts, every vendor contact on one sheet — and an AI help desk trained on the Lakeside's operations. Type in a question about how anything works here, and it answers.</p>
-        <p>None of that is theoretical. The Lakeside runs on those systems today — the current on-site manager uses the manual every single day.</p>
-        <p>And the property is genuinely flexible. We ran it fully virtually for two years: guests booked online, got a check-in text with their lockbox code and WiFi password, and let themselves in. We never got one 3 a.m. lockout call, and check-in became our single highest-rated category. So a new owner gets a real choice — run it with people at the desk, run it virtually from anywhere, or blend the two. The systems support all three, because I built them on purpose.</p>
+        <p>Here's the secret nobody selling a small motel wants to say out loud: most of them run on somebody's memory. When we took over in 2020, everything I was told about this place fit on the back of a few index cards and an envelope. That was the whole operating system.</p>
+        <p>But that's just not how I roll. THIS type of stuff is actually my most favorite passion in life — truly! Not joking. I excel at taking the messy, disorganized way a business runs and building out the resources, systems and documentation that make things feel ... easier. Less stressful. More clear.</p>
+        <p>With the Lakeside, I took essentially nothing as far as documentation goes for how to run this business, and built a full operating system that anyone who can read would be able to figure out — a 116-page owners manual covering every aspect of the business. Detailed cleaning checklists for housekeeping. Guest forms and information, employee onboarding materials. How to winterize the property, what to do every spring, summer, fall, and every month in between. Guest reservation and check-in email systems. Every vendor and contact on one sheet.</p>
+        <p>Even an AI help desk trained on the Lakeside's operations — type in a question about how anything works here, and it answers.</p>
+        <p>None of that is theoretical. The current on-site manager uses the manual every single day.</p>
+        <p>And you get to choose how you run it. We ran the whole place fully virtually for two years — guests booked online, got a text with their lockbox code and WiFi password, and let themselves in, just like an Airbnb! We never got one 3 a.m. &ldquo;I locked myself out of my room&rdquo; text, because they have the code to access the spare in the lockbox outside of their door. Our virtual check-in process is actually one of our highest-rated categories from the guest feedback forms too.</p>
       </div>
     </div>
     <div class="grid sys-cards">
@@ -683,36 +759,90 @@ footer .fnav a:hover{color:var(--cream);}
   </div>
 </section>
 
+<!-- ============ SECTION 6.5 — ABOUT THE NUMBERS ============ -->
+<section class="section" id="numbers">
+  <div class="wrap">
+    <div class="narrow center">
+      <p class="eyebrow reveal">Read This Before You Read the P&amp;L</p>
+      <h2 class="reveal" style="--d:0.1s;margin-top:22px;">The books show a renovation, not a <em>business</em>.</h2>
+      <div class="body-copy reveal" style="--d:0.18s;margin-top:36px;">
+        <p>Here's the conversation most sellers hope you won't start, so we'll start it ourselves. When you request the financials (you should — they're available to qualified buyers), the recent profit line is not going to wow you. We know. There's a reason, and it's sitting in every photo on this page.</p>
+        <p>Remember the couple who ran this place for 25 years? Their model worked because they just ran it. No projects, no renovations, no updates — a steady, old-fashioned mom-and-pop, profitable the whole way through. That's 25 years of proof that this business works when someone simply operates it.</p>
+        <p>We did the opposite, on purpose. For seven years, nearly every month, money that could have been profit went back into the property instead. Gutted rooms. New exterior. Rebuilt bathhouse. New drain field. Remodeled restaurant. Systems, signage, all of it. Our books don't show a business that can't make money — they show a business that funded its own top-to-bottom rebuild while staying open, staying spotless, and holding a 94% guest rating the entire time.</p>
+        <p>So here's what you're actually walking into: the reinvestment era is over. Roughly 90% of what this property needed, we already did. You'd be the first owner in decades who gets to just run the Lakeside — modern property, proven demand, documented systems — without pouring the profits into catching up.</p>
+        <p class="standout">They proved the business for 25 years. We rebuilt the property for 7. You're the chapter where those two finally happen at the same time.</p>
+      </div>
+    </div>
+    <div class="stats-block reveal">
+      <div><div class="num">25</div><div class="lbl">Years — they proved the business</div></div>
+      <div><div class="num">7</div><div class="lbl">Years — we rebuilt the property</div></div>
+      <div><div class="num">Now</div><div class="lbl">Your chapter — just run it</div></div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ SECTION 7 — WHAT IT COULD BE ============ -->
 <section class="section panel" id="couldbe">
   <div class="wrap">
     <div class="narrow center">
       <p class="eyebrow reveal">The Unwritten Chapters</p>
-      <h2 class="reveal" style="--d:0.1s;margin-top:22px;">We proved what works. We left room for <em>imagination</em>.</h2>
+      <h2 class="reveal" style="--d:0.1s;margin-top:22px;">Everything below has already made money <em>here</em>.</h2>
       <div class="body-copy reveal" style="--d:0.18s;margin-top:36px;">
-        <p>Every idea below has already earned money or been seriously explored here. None has ever gotten someone's full creative attention. That's the opportunity.</p>
+        <p>That's the standard for this list. Every idea either earned revenue or got seriously explored — and none of them ever had someone's full creative attention. That's your opening.</p>
       </div>
     </div>
     <div class="grid idea-grid">
       <div class="idea-card reveal">
         <div class="img"><img src="assets/event-garlands.jpg" alt="Event dinner with garlands in the dining room"><span class="chip">Proven — 2024</span></div>
-        <div class="txt"><h3>The Event Center</h3><p>The remodeled restaurant building — vaulted ceilings, black beams, chandeliers, commercial kitchen — hosted a full wedding in 2024, plus corporate events, birthday dinners, and a retirement party. Rent it by the hour or day, with kitchen access included.</p></div>
+        <div class="txt"><h3>The Event Center</h3><p>The remodeled restaurant building — vaulted ceilings, black beams, chandeliers, commercial kitchen — hosted a full wedding in 2024, plus corporate events, birthday dinners, and a retirement party. Rent it by the hour or the day, kitchen included. We proved the demand exists; we just never chased it.</p></div>
       </div>
       <div class="idea-card reveal" style="--d:0.08s">
         <div class="img"><img src="assets/rv-golden-hour.jpg" alt="RV park at golden hour"><span class="chip">70% Weekdays</span></div>
-        <div class="txt"><h3>The Contractor Trade</h3><p>Our data surprised us: over 70% of bookings are weekdays — road crews, BLM (they block-book every year), solar and excavation projects on months-long contracts. Nobody has ever marketed to this guest on purpose. The demand walks in on its own.</p></div>
+        <div class="txt"><h3>The Contractor Trade</h3><p>Our data surprised us: over 70% of bookings are weekdays. Road crews. BLM (they block-book every year). Solar and excavation projects on months-long contracts. Nobody has ever marketed to this guest on purpose — the demand literally walks in on its own. Imagine what happens if someone actually calls them first.</p></div>
       </div>
       <div class="idea-card reveal" style="--d:0.16s">
         <div class="img"><img src="assets/branded-cups.jpg" alt="Lakeside branded coffee cups"><span class="chip">Equipment in Place</span></div>
-        <div class="txt"><h3>The Kitchen</h3><p>A commercial kitchen with equipment in place. Continental breakfast is served for guests today; catering, a food pop-up, or a leased kitchen are all proven or explored paths. Honest note: full restaurant service would mean fresh health-department permitting — we'll tell you exactly what that path looks like.</p></div>
+        <div class="txt"><h3>The Kitchen</h3><p>A commercial kitchen, equipment in place, serving continental breakfast today. Catering, a food pop-up, and a leased kitchen are all proven or explored paths. Full disclosure, because that's how we operate: bringing back full restaurant service means fresh health-department permitting. We'll tell you exactly what that path looks like.</p></div>
       </div>
       <div class="idea-card reveal" style="--d:0.24s">
         <div class="img"><img src="assets/dunes-motocross.jpg" alt="Motocross rider in the air over the sand dunes"><span class="chip">Room to Grow</span></div>
-        <div class="txt"><h3>Room to Grow</h3><p>Three inactive RV pads, expansion room in the drainfield zone, and channels we never fully opened — Airbnb has been discussed more than once and we think it's right.</p></div>
+        <div class="txt"><h3>Room to Grow</h3><p>Three inactive RV pads. Expansion room in the drainfield zone. Channels we never fully opened — Airbnb has come up more than once, and we think it's right.</p></div>
       </div>
       <div class="idea-card reveal" style="--d:0.32s">
         <div class="img"><img src="assets/beams-detail.jpg" alt="Dining room beams detail"><span class="chip">Floated More Than Once</span></div>
-        <div class="txt"><h3>The Bunkhouse Idea</h3><p>A rustic bunkhouse conversion for hunters and work crews has been floated more than once. The remodeled shell and the location make it plausible.</p></div>
+        <div class="txt"><h3>The Bunkhouse Idea</h3><p>A rustic bunkhouse conversion for hunters and work crews has been floated more than once. The remodeled shell and the location make it plausible. Somebody just has to want to.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ — QUESTIONS EVERYONE ASKS ============ -->
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="narrow center">
+      <p class="eyebrow reveal">Real Talk</p>
+      <h2 class="reveal" style="--d:0.1s;margin-top:22px;">Questions everyone <em>asks</em>.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <h3>Do I have to run the restaurant?</h3>
+        <p>No. The kitchen serves continental breakfast today and the building earns as an event space. Full restaurant service is an option with a known permitting path, not an obligation.</p>
+      </div>
+      <div class="faq-item reveal" style="--d:0.06s">
+        <h3>Can I really run this from somewhere else?</h3>
+        <p>We did — fully virtually, for two years, with check-in as our highest-rated category the whole time. The systems that made that possible come with the property.</p>
+      </div>
+      <div class="faq-item reveal" style="--d:0.12s">
+        <h3>Do I need hospitality experience?</h3>
+        <p>We didn't have any. That's why the manual is 116 pages.</p>
+      </div>
+      <div class="faq-item reveal" style="--d:0.18s">
+        <h3>Why don't the recent books look better?</h3>
+        <p>Because for seven years we ran a renovation and a business at the same time, and the renovation ate the profits — on purpose. The previous owners ran it profitably for 25 years without touching it. The property is now rebuilt, so the next owner gets to do what they did, with what we built. (Full story in &ldquo;About the Numbers&rdquo; above.)</p>
+      </div>
+      <div class="faq-item reveal" style="--d:0.24s">
+        <h3>What does it cost?</h3>
+        <p>Financials and asking price go to qualified buyers who ask. Fill out the form and introduce yourself.</p>
       </div>
     </div>
   </div>
@@ -724,8 +854,8 @@ footer .fnav a:hover{color:var(--cream);}
     <p class="eyebrow reveal">The High Desert, Three Hours from Anywhere</p>
     <h2 class="reveal" style="--d:0.1s;margin-top:22px;">The scenery photographs. The <em>feeling</em> doesn't.</h2>
     <div class="body-copy reveal" style="--d:0.18s;margin-top:36px;">
-      <p>Photos can show you the lake, but they can't play you the sound of it — the geese and ducks guests wake up to, the pelicans that come through every year like an event. Christmas Valley is remote high desert and a genuine dark-sky area: almost no light pollution, stars people drive hours for.</p>
-      <p>You're minutes from Fort Rock and its cave where the Northern Paiute lived for thousands of years, near the Summer Lake Wildlife Area, and down the road from the Cowboy Dinner Tree, which sends us one-nighters all season. Sand dunes for off-roading. Crack in the Ground. The Lost Forest. Whether you're watching the sunset over the water or standing in the stillness after dark, there's something out here you have to stand in to understand.</p>
+      <p>Photos can show you the lake. They can't play you the sound of it — the geese and ducks guests wake up to, the pelicans that arrive every year like they booked in advance. Christmas Valley is remote high desert and a genuine dark-sky area. Almost no light pollution. The kind of stars people drive hours for; here they're just what happens at night.</p>
+      <p>You're minutes from Fort Rock and the cave where the Northern Paiute lived for thousands of years. Near the Summer Lake Wildlife Area. Down the road from the Cowboy Dinner Tree, which sends us one-nighters all season. Sand dunes for off-roading. Crack in the Ground. The Lost Forest. Whether you're watching the sunset over the water or standing in the stillness after dark, there's something out here you have to stand in to understand.</p>
     </div>
   </div>
   <figure class="full-bleed reveal" style="margin-top:80px;">
@@ -750,7 +880,7 @@ footer .fnav a:hover{color:var(--cream);}
     <div class="body-copy reveal" style="--d:0.18s;margin-top:40px;">
       <p>In 2020, our family bought a tired property that everyone in town had circled and nobody had jumped on. We spent the years since restoring it building by building, and turning how-to-run-it knowledge that fit on a few index cards into a complete, documented operating system. The Lakeside today is clean, systematized, loved by its guests, and able to run staffed or virtually.</p>
       <p>That was the work. And it's done.</p>
-      <p>Our family's season has changed — my parents are large-scale farmers with an operation that consumes them from spring dirt work through haying, and I've built a business of my own where my heart and energy live now. The Lakeside deserves owners whose next chapter it is.</p>
+      <p>Our family's season has changed — my parents are large-scale farmers with an operation that consumes them from spring dirt work through haying, and I've built a business of my own where my heart and energy live now. The truth about us is that we're builders: we pour everything into a place, leave it better than we found it, and know when it's time to hand it to the people meant to run it. The Lakeside deserves owners whose next chapter it is.</p>
       <p>I won't pretend it was easy. We set out buckets under a leaking roof our first winter. We made hard calls. But this place gave our family seven years of livelihood, taught me everything I know about running a business, and gave our guests — by their own words, over a thousand of them — a clean, peaceful place on the water they keep coming back to.</p>
       <p>We're not walking away from something broken. We're handing forward something we finished — to whoever is ready to write the part we weren't meant to.</p>
     </div>
@@ -765,7 +895,8 @@ footer .fnav a:hover{color:var(--cream);}
       <p class="eyebrow reveal">Seriously Interested?</p>
       <h2 class="reveal" style="--d:0.1s;margin-top:22px;">Come stand on the <em>bank</em> and see.</h2>
       <div class="body-copy reveal" style="--d:0.18s;margin-top:36px;">
-        <p>The full story is deeper than one page. Ask us anything: the property details, the systems, the numbers — financials are available to qualified buyers on request. Better yet, come stay a night and let the quiet make the argument.</p>
+        <p>If you can already picture yourself drinking coffee at the water's edge while the geese file past like they own the place — we should talk.</p>
+        <p>Ask us anything: the property, the systems, the numbers. Financials are available to qualified buyers on request. Better yet, come stay a night and let the quiet make the argument for us.</p>
       </div>
     </div>
     <div class="contact-split">
@@ -797,10 +928,10 @@ footer .fnav a:hover{color:var(--cream);}
   <div class="addr">87275 Spruce Lane, Christmas Valley, OR 97641</div>
   <div class="fnav">
     <a href="#top">Home</a>
-    <a href="#" title="Coming soon">The Property</a>
-    <a href="#" title="Coming soon">How It Runs</a>
-    <a href="#" title="Coming soon">What It Could Be</a>
-    <a href="#" title="Coming soon">The Setting</a>
+    <a href="#found" data-note="deep-dive page coming later">The Property</a>
+    <a href="#runs" data-note="deep-dive page coming later">How It Runs</a>
+    <a href="#couldbe" data-note="deep-dive page coming later">What It Could Be</a>
+    <a href="#setting" data-note="deep-dive page coming later">The Setting</a>
     <a href="#contact">Details &amp; Contact</a>
   </div>
 </footer>
@@ -816,6 +947,14 @@ const ov=document.getElementById('menuOverlay');
 document.getElementById('menuBtn').addEventListener('click',()=>ov.classList.add('open'));
 document.getElementById('menuClose').addEventListener('click',()=>ov.classList.remove('open'));
 ov.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>ov.classList.remove('open')));
+// scrollspy — highlight the nav pill for the section in view
+const spyMap={top:'#top',swather:'#top',found:'#found',built:'#found',restaurant:'#found',guests:'#found',runs:'#runs',numbers:'#runs',couldbe:'#couldbe',faq:'#couldbe',setting:'#setting',forward:'#contact',contact:'#contact'};
+const navLinks=document.querySelectorAll('nav .nav-links a');
+function setActive(h){navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')===h));}
+const spyIO=new IntersectionObserver(es=>{
+  es.forEach(e=>{if(e.isIntersecting){const h=spyMap[e.target.id];if(h)setActive(h);}});
+},{rootMargin:'-35% 0px -60% 0px',threshold:0});
+Object.keys(spyMap).forEach(id=>{const el=document.getElementById(id);if(el)spyIO.observe(el);});
 // rotating guest quotes
 const slides=[...document.querySelectorAll('.quote-slide')];
 let qi=0,qt;
