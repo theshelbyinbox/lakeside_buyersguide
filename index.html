@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Lakeside Motel &amp; RV Park — A Finished Restoration, For Sale</title>
+<meta name="description" content="The Lakeside Motel & RV Park in Christmas Valley, Oregon is for sale — ten remodeled lakefront rooms, thirty-one RV spaces, a commercial kitchen, and a complete operating system built over seven years.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============ WARM EDITORIAL SYSTEM — THE LAKESIDE ============ */
+:root{
+  --cream:#FBF4EB;
+  --cream-deep:#F2E8DA;
+  --offwhite:#FAF6F0;
+  --ink:#3E3022;
+  --ochre:#775913;
+  --sand:#DFD3BD;
+  --sage:#C0C2B3;
+  --serif:'Amiri', 'Cormorant Garamond', Georgia, serif;
+  --body:'Spectral', 'Newsreader', Georgia, serif;
+  --sans:'Hanken Grotesk', sans-serif;
+  --ease:cubic-bezier(0.32,0.72,0,1);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--cream);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:17px;
+  line-height:1.6;
+  font-weight:300;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%;}
+a{color:inherit;}
+
+/* ---- type ---- */
+.eyebrow{
+  font-family:var(--sans);
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--ochre);
+}
+.eyebrow.on-photo{color:var(--sand);text-shadow:0 1px 14px rgba(62,48,34,0.6);}
+h1,h2{
+  font-family:var(--serif);
+  font-weight:400;
+  letter-spacing:-0.04em;
+  line-height:1.12;
+  text-align:center;
+}
+h1{font-size:clamp(40px,6vw,60px);}
+h2{font-size:clamp(32px,4.2vw,45px);}
+h1 em,h2 em,.pullquote em{font-style:italic;}
+.lede{
+  font-size:18px;
+  max-width:60ch;
+  margin:0 auto;
+  text-align:center;
+}
+
+/* ---- buttons ---- */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--sans);
+  font-size:12px;font-weight:600;
+  letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--ink);
+  text-decoration:none;
+  border:1px solid var(--ink);
+  border-radius:999px;
+  padding:14px 30px;
+  transition:background 0.55s var(--ease),color 0.55s var(--ease),border-color 0.55s var(--ease),transform 0.35s var(--ease);
+}
+.btn:hover{background:var(--ochre);border-color:var(--ochre);color:var(--cream);}
+.btn:active{transform:scale(0.98);}
+.btn.on-photo{color:var(--cream);border-color:rgba(251,244,235,0.75);}
+.btn.on-photo:hover{background:var(--ochre);border-color:var(--ochre);color:var(--cream);}
+.textlink{
+  font-family:var(--sans);font-size:12px;font-weight:600;
+  letter-spacing:0.18em;text-transform:uppercase;
+  text-decoration:none;
+  border-bottom:1px solid var(--sand);
+  padding-bottom:4px;
+  transition:border-color 0.4s var(--ease),color 0.4s var(--ease);
+}
+.textlink:hover{border-color:var(--ochre);color:var(--ochre);}
+.textlink.on-photo{color:var(--sand);border-color:rgba(223,211,189,0.5);}
+.textlink.on-photo:hover{color:var(--cream);border-color:var(--cream);}
+
+/* ---- chips ---- */
+.chip{
+  position:absolute;
+  font-family:var(--sans);
+  font-size:11px;font-weight:600;
+  letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--ink);
+  background:rgba(251,244,235,0.92);
+  border-radius:999px;
+  padding:8px 16px;
+  pointer-events:none;
+  white-space:nowrap;
+}
+
+/* ---- layout primitives ---- */
+.section{padding:120px 24px;}
+.section.tight{padding:96px 24px;}
+.wrap{max-width:1160px;margin:0 auto;}
+.narrow{max-width:680px;margin:0 auto;}
+.center{text-align:center;}
+.hairline{border:none;border-top:1px solid var(--sand);max-width:1160px;margin:0 auto;}
+.stack-24>*+*{margin-top:24px;}
+.stack-32>*+*{margin-top:32px;}
+.photo-card{
+  position:relative;
+  border-radius:14px;
+  overflow:hidden;
+}
+.photo-card img{width:100%;height:100%;object-fit:cover;}
+
+/* ---- nav ---- */
+nav{
+  position:fixed;top:20px;left:50%;transform:translateX(-50%);
+  z-index:100;
+  display:flex;align-items:center;gap:6px;
+  background:rgba(251,244,235,0.88);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border:1px solid rgba(223,211,189,0.6);
+  border-radius:999px;
+  padding:7px 10px 7px 16px;
+  max-width:calc(100vw - 32px);
+}
+nav .nav-logo img{height:30px;width:auto;}
+nav .nav-links{display:flex;gap:2px;margin-left:8px;}
+nav .nav-links a{
+  font-family:var(--sans);font-size:11px;font-weight:600;
+  letter-spacing:0.14em;text-transform:uppercase;
+  text-decoration:none;color:var(--ink);
+  padding:8px 13px;border-radius:999px;
+  transition:background 0.45s var(--ease),color 0.45s var(--ease);
+  white-space:nowrap;
+}
+nav .nav-links a:hover,nav .nav-links a.active{background:var(--ochre);color:var(--cream);}
+.menu-btn{
+  display:none;
+  font-family:var(--sans);font-size:11px;font-weight:600;
+  letter-spacing:0.18em;text-transform:uppercase;
+  background:none;border:none;color:var(--ink);
+  padding:8px 14px;cursor:pointer;
+}
+@media(max-width:940px){
+  nav .nav-links{display:none;}
+  .menu-btn{display:block;}
+}
+/* mobile menu overlay */
+.menu-overlay{
+  position:fixed;inset:0;z-index:200;
+  background:rgba(251,244,235,0.96);
+  backdrop-filter:blur(24px);
+  -webkit-backdrop-filter:blur(24px);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+  opacity:0;pointer-events:none;
+  transition:opacity 0.6s var(--ease);
+}
+.menu-overlay.open{opacity:1;pointer-events:auto;}
+.menu-overlay a{
+  font-family:var(--serif);
+  font-size:32px;letter-spacing:-0.03em;
+  text-decoration:none;color:var(--ink);
+  padding:8px 0;
+  opacity:0;transform:translateY(24px);
+  transition:opacity 0.7s var(--ease),transform 0.7s var(--ease),color 0.4s var(--ease);
+}
+.menu-overlay.open a{opacity:1;transform:translateY(0);}
+.menu-overlay a:hover{color:var(--ochre);font-style:italic;}
+.menu-close{
+  position:absolute;top:28px;right:28px;
+  font-family:var(--sans);font-size:12px;font-weight:600;
+  letter-spacing:0.18em;text-transform:uppercase;
+  background:none;border:1px solid var(--sand);border-radius:999px;
+  padding:10px 20px;color:var(--ink);cursor:pointer;
+}
+
+/* ---- scroll reveal ---- */
+.reveal{
+  opacity:0;
+  transform:translateY(28px);
+  filter:blur(5px);
+  transition:opacity 1s var(--ease),transform 1s var(--ease),filter 1s var(--ease);
+  transition-delay:var(--d,0s);
+}
+.reveal.in{opacity:1;transform:translateY(0);filter:blur(0);}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;filter:none;transition:none;}
+  html{scroll-behavior:auto;}
+}
+
+/* ============ SECTION 1 — HERO ============ */
+.hero{
+  position:relative;
+  min-height:100dvh;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:flex-end;
+  overflow:hidden;
+}
+.hero-bg{position:absolute;inset:0;}
+.hero-bg img{width:100%;height:100%;object-fit:cover;}
+.hero-scrim{
+  position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(62,48,34,0.30) 0%,rgba(62,48,34,0.05) 34%,rgba(62,48,34,0.10) 58%,rgba(62,48,34,0.68) 100%);
+}
+.hero-content{
+  position:relative;
+  padding:0 24px 96px;
+  display:flex;flex-direction:column;align-items:center;gap:26px;
+  text-align:center;
+  max-width:980px;
+}
+.hero-content h1{color:var(--cream);text-shadow:0 1px 30px rgba(62,48,34,0.35);}
+.hero .chip{top:96px;right:28px;}
+@media(max-width:640px){.hero .chip{top:auto;bottom:auto;display:none;}}
+
+/* hero deck (cream, directly beneath photo) */
+.hero-deck{padding:96px 24px 110px;}
+.hero-deck .lede{font-size:19px;line-height:1.6;}
+.hero-ctas{
+  display:flex;align-items:center;justify-content:center;gap:34px;
+  margin-top:44px;flex-wrap:wrap;
+}
+
+/* ============ SECTION 2 — SWATHER ============ */
+.swather{background:var(--cream);}
+.swather .body-block p+p{margin-top:22px;}
+.swather .body-block{
+  max-width:56ch;margin:0 auto;text-align:center;font-size:18px;
+}
+.swather .keys-line{
+  font-family:var(--serif);
+  font-size:24px;
+  letter-spacing:-0.02em;
+  margin-top:34px;
+}
+.swather .photo-card{
+  max-width:520px;margin:64px auto 0;
+}
+.swather .photo-card .chip{bottom:16px;left:16px;}
+
+/* ---- shared editorial pieces ---- */
+.panel{background:var(--cream-deep);}
+.standout{
+  font-family:var(--serif);
+  font-size:24px;
+  letter-spacing:-0.02em;
+  line-height:1.3;
+}
+.pullquote{
+  font-family:var(--serif);
+  font-size:clamp(26px,3.4vw,38px);
+  letter-spacing:-0.03em;
+  line-height:1.3;
+  text-align:center;
+  max-width:22ch;
+  margin:0 auto;
+}
+.grid{display:grid;gap:16px;}
+.photo-card.fill img{height:100%;}
+.body-copy{max-width:62ch;margin:0 auto;text-align:center;}
+.body-copy p+p{margin-top:22px;}
+
+/* ============ SECTION 3 — WHAT WE FOUND ============ */
+.found-grid{
+  grid-template-columns:1.15fr 1fr 1fr;
+  grid-auto-rows:280px;
+  margin-top:72px;
+}
+.found-grid .photo-card:first-child{grid-row:span 2;}
+.found-grid .photo-card:last-child{grid-column:span 2;}
+@media(max-width:860px){.found-grid .photo-card:last-child{grid-column:auto;}}
+.found-grid .chip{bottom:14px;left:14px;}
+@media(max-width:860px){
+  .found-grid{grid-template-columns:1fr;grid-auto-rows:320px;}
+  .found-grid .photo-card:first-child{grid-row:auto;}
+}
+
+/* ============ SECTION 4 — WHAT WE BUILT ============ */
+.work-grid{
+  grid-template-columns:repeat(4,1fr);
+  grid-auto-rows:300px;
+  margin:72px 0;
+}
+.work-grid .chip{bottom:14px;left:14px;}
+@media(max-width:1000px){.work-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.work-grid{grid-template-columns:1fr;grid-auto-rows:340px;}}
+.payoff{margin-top:80px;}
+.payoff .photo-card{margin:0 auto;}
+.payoff .big{max-width:980px;}
+.payoff .big img{max-height:640px;width:100%;object-fit:cover;}
+.payoff .chip{bottom:16px;left:16px;}
+.payoff .small{max-width:620px;margin-top:16px;}
+.quote-block{padding:90px 24px;}
+
+/* ============ SECTION 5 — WHAT GUESTS SAY ============ */
+.stats-block{
+  background:var(--sage);
+  border-radius:16px;
+  padding:64px 40px;
+  margin:72px auto 0;
+  max-width:980px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:32px;
+  text-align:center;
+}
+.stats-block .num{
+  font-family:var(--serif);
+  font-size:45px;
+  letter-spacing:-0.03em;
+  line-height:1;
+  color:var(--ink);
+}
+.stats-block .lbl{
+  font-family:var(--sans);
+  font-size:12px;font-weight:600;
+  letter-spacing:0.16em;text-transform:uppercase;
+  margin-top:14px;color:var(--ink);
+}
+@media(max-width:720px){.stats-block{grid-template-columns:1fr;padding:48px 28px;}}
+.quotes-rotator{max-width:640px;margin:80px auto 0;text-align:center;position:relative;}
+.quote-slide{display:none;}
+.quote-slide.active{display:block;animation:qfade 0.9s var(--ease);}
+@keyframes qfade{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+.quote-slide .q{
+  font-family:var(--serif);
+  font-size:24px;letter-spacing:-0.02em;line-height:1.45;
+}
+.quote-slide .attr{
+  font-family:var(--sans);font-size:12px;font-weight:600;
+  letter-spacing:0.16em;text-transform:uppercase;
+  margin-top:22px;color:var(--ochre);
+}
+.quote-arrows{display:flex;justify-content:center;gap:14px;margin-top:36px;}
+.quote-arrows button{
+  font-family:var(--body);font-size:18px;
+  background:none;color:var(--ink);
+  border:1px solid var(--sand);border-radius:999px;
+  width:44px;height:44px;cursor:pointer;
+  transition:background 0.45s var(--ease),color 0.45s var(--ease),border-color 0.45s var(--ease);
+}
+.quote-arrows button:hover{background:var(--ochre);border-color:var(--ochre);color:var(--cream);}
+.guest-strip{grid-template-columns:repeat(3,1fr);grid-auto-rows:320px;margin-top:80px;}
+.guest-strip .chip{bottom:14px;left:14px;}
+@media(max-width:860px){.guest-strip{grid-template-columns:1fr;}}
+
+/* ============ SECTION 6 — HOW IT RUNS ============ */
+.sys-cards{
+  grid-template-columns:repeat(4,1fr);
+  margin-top:72px;
+}
+.sys-card{
+  border:1px solid var(--sand);
+  border-radius:14px;
+  background:var(--offwhite);
+  padding:34px 26px;
+  text-align:left;
+}
+.sys-card .lbl{
+  font-family:var(--sans);font-size:11px;font-weight:600;
+  letter-spacing:0.2em;text-transform:uppercase;color:var(--ochre);
+}
+.sys-card p{margin-top:16px;font-size:16px;line-height:1.55;}
+@media(max-width:1000px){.sys-cards{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.sys-cards{grid-template-columns:1fr;}}
+.vignette-strip{grid-template-columns:repeat(3,1fr);grid-auto-rows:300px;margin-top:72px;}
+.vignette-strip .chip{bottom:14px;left:14px;}
+@media(max-width:860px){.vignette-strip{grid-template-columns:1fr;}}
+
+/* ============ SECTION 7 — WHAT IT COULD BE ============ */
+.idea-grid{grid-template-columns:repeat(3,1fr);margin-top:72px;gap:18px;}
+.idea-card{
+  border:1px solid var(--sand);
+  border-radius:16px;
+  background:var(--cream);
+  overflow:hidden;
+  display:flex;flex-direction:column;
+  text-align:left;
+}
+.idea-card .img{position:relative;height:230px;}
+.idea-card .img img{width:100%;height:100%;object-fit:cover;}
+.idea-card .img .chip{top:14px;left:14px;}
+.idea-card .txt{padding:28px 26px 32px;}
+.idea-card h3{
+  font-family:var(--serif);font-weight:400;
+  font-size:24px;letter-spacing:-0.02em;
+}
+.idea-card p{margin-top:12px;font-size:16px;line-height:1.55;}
+.idea-grid .wide{grid-column:span 1;}
+@media(max-width:1000px){.idea-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:640px){.idea-grid{grid-template-columns:1fr;}}
+
+/* ============ SECTION 8 — THE SETTING ============ */
+.full-bleed{
+  position:relative;
+  width:100vw;margin-left:calc(50% - 50vw);
+}
+.full-bleed img{width:100%;height:78vh;object-fit:cover;}
+.full-bleed .chip{bottom:20px;left:24px;}
+.setting-grid{grid-template-columns:repeat(4,1fr);grid-auto-rows:300px;margin-top:16px;}
+.setting-grid .chip{bottom:14px;left:14px;}
+@media(max-width:1000px){.setting-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.setting-grid{grid-template-columns:1fr;}}
+
+/* ============ SECTION 9 — OCHRE BLOCK ============ */
+.forward{
+  background:var(--ochre);
+  color:var(--sand);
+  padding:150px 24px;
+}
+.forward .eyebrow{color:var(--sand);opacity:0.85;}
+.forward h2{color:var(--cream);}
+.forward .body-copy{color:var(--cream);font-size:18px;}
+.forward .body-copy p+p{margin-top:24px;}
+.forward .sig{
+  font-family:var(--serif);
+  font-size:24px;font-style:italic;
+  color:var(--cream);
+  margin-top:44px;
+}
+
+/* ============ SECTION 10 — CONTACT ============ */
+.contact-split{
+  display:grid;grid-template-columns:1fr 1fr;gap:64px;
+  align-items:center;margin-top:72px;
+}
+@media(max-width:900px){.contact-split{grid-template-columns:1fr;}}
+.contact-form label{
+  display:block;
+  font-family:var(--sans);font-size:11px;font-weight:600;
+  letter-spacing:0.18em;text-transform:uppercase;
+  margin:24px 0 8px;color:var(--ink);
+}
+.contact-form label:first-child{margin-top:0;}
+.contact-form input,.contact-form textarea{
+  width:100%;
+  font-family:var(--body);font-size:16px;color:var(--ink);
+  background:var(--offwhite);
+  border:1px solid var(--sand);
+  border-radius:10px;
+  padding:13px 16px;
+  outline:none;
+  transition:border-color 0.4s var(--ease);
+}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--ochre);}
+.contact-form textarea{min-height:120px;resize:vertical;}
+.contact-form .btn{margin-top:32px;cursor:pointer;background:none;}
+.contact-note{
+  font-family:var(--sans);font-size:12px;letter-spacing:0.08em;
+  margin-top:22px;color:var(--ink);opacity:0.75;
+}
+.contact-photo .chip{bottom:16px;left:16px;}
+.form-thanks{display:none;margin-top:26px;font-family:var(--serif);font-size:24px;font-style:italic;}
+
+/* ============ FOOTER ============ */
+footer{
+  background:var(--ink);
+  color:var(--sand);
+  padding:72px 24px 56px;
+  text-align:center;
+}
+footer .goose{height:52px;margin:0 auto 26px;}
+footer .name{
+  font-family:var(--serif);font-size:24px;letter-spacing:-0.02em;color:var(--cream);
+}
+footer .addr{
+  font-family:var(--sans);font-size:12px;letter-spacing:0.14em;text-transform:uppercase;
+  margin-top:14px;opacity:0.8;
+}
+footer .fnav{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 26px;margin-top:34px;}
+footer .fnav a{
+  font-family:var(--sans);font-size:11px;font-weight:600;
+  letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--sand);text-decoration:none;
+  transition:color 0.4s var(--ease);
+}
+footer .fnav a:hover{color:var(--cream);}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav id="nav">
+  <a class="nav-logo" href="#top" aria-label="The Lakeside Motel & RV Park">
+    <img src="assets/logo-burnt-orange.png" alt="The Lakeside goose logo">
+  </a>
+  <div class="nav-links">
+    <a href="#top" class="active">Home</a>
+    <a href="#" title="Coming soon">The Property</a>
+    <a href="#" title="Coming soon">How It Runs</a>
+    <a href="#" title="Coming soon">What It Could Be</a>
+    <a href="#" title="Coming soon">The Setting</a>
+    <a href="#contact">Details &amp; Contact</a>
+  </div>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu">Menu</button>
+</nav>
+<div class="menu-overlay" id="menuOverlay">
+  <button class="menu-close" id="menuClose">Close</button>
+  <a href="#top" style="transition-delay:0.08s">Home</a>
+  <a href="#" style="transition-delay:0.14s" title="Coming soon">The Property</a>
+  <a href="#" style="transition-delay:0.20s" title="Coming soon">How It Runs</a>
+  <a href="#" style="transition-delay:0.26s" title="Coming soon">What It Could Be</a>
+  <a href="#" style="transition-delay:0.32s" title="Coming soon">The Setting</a>
+  <a href="#contact" style="transition-delay:0.38s">Details &amp; Contact</a>
+</div>
+
+<!-- ============ SECTION 1 — HERO ============ -->
+<header class="hero" id="top">
+  <div class="hero-bg"><img src="assets/hero-sunrise-lake.jpg" alt="Sunrise over Baert Lake through the grasses, with the Lakeside cabins on the bank"></div>
+  <div class="hero-scrim"></div>
+  <span class="chip">Baert Lake — Sunrise</span>
+  <div class="hero-content">
+    <p class="eyebrow on-photo reveal">Christmas Valley, Oregon — On the Bank of Baert Lake</p>
+    <h1 class="reveal" style="--d:0.12s">A finished restoration.<br>An unwritten <em>next</em> chapter.</h1>
+  </div>
+</header>
+
+<section class="hero-deck">
+  <div class="narrow center">
+    <p class="lede reveal">The Lakeside Motel &amp; RV Park is for sale — ten remodeled lakefront rooms, thirty-one RV spaces, a commercial kitchen, and a complete operating system built over seven years by the family that restored it.</p>
+    <div class="hero-ctas reveal" style="--d:0.15s">
+      <a class="btn" href="#swather">Read the Story</a>
+      <a class="textlink" href="#contact">Begin the Conversation</a>
+    </div>
+  </div>
+</section>
+
+<hr class="hairline">
+
+<!-- ============ SECTION 2 — THE SWATHER TEXT ============ -->
+<section class="section swather" id="swather">
+  <div class="narrow center">
+    <p class="eyebrow reveal">Fall 2019 — How It Started</p>
+    <h2 class="reveal" style="--d:0.1s;margin-top:22px;">It started with my mom <em>on</em> a swather.</h2>
+    <div class="body-block reveal" style="--d:0.18s;margin-top:36px;">
+      <p>She'd been out cutting hay too long with nothing but her own thoughts, and she texted me a question: would I ever want to live in Christmas Valley if I had my own business to run? A week later, sitting at the post office, she mentioned the Lakeside was for sale — and had been for a while.</p>
+      <p>Everybody in town had circled it. Nobody had jumped.</p>
+      <p class="keys-line">We got the keys January 1st, 2020.</p>
+    </div>
+    <figure class="photo-card reveal" style="--d:0.22s">
+      <img src="assets/keys-day-one.jpg" alt="The family on day one, holding the keys — it's officially official">
+      <span class="chip">January 1, 2020 — Day One</span>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ SECTION 3 — WHAT WE FOUND ============ -->
+<section class="section panel" id="found">
+  <div class="wrap">
+    <div class="narrow center">
+      <p class="eyebrow reveal">January 2020 — The Honest Before</p>
+      <h2 class="reveal" style="--d:0.1s;margin-top:22px;">Nobody would ever call it <em>easy</em>.</h2>
+      <div class="body-copy reveal" style="--d:0.18s;margin-top:36px;">
+        <p>My dad didn't sugarcoat it: there were definite issues, and lots of things that needed fixed. Peaked ceiling beams stained an ugly red. Tired carpet everywhere. Motel rooms that were old and musty, with window box AC units and infrastructure dating back to the 1960s. That first winter, the restaurant roof had more than five leaks going at once.</p>
+        <p class="standout">We set out buckets.</p>
+        <p>But underneath all of it: the Lakeside sits right on the bank of the lake. Guests wake up to geese and ducks, the pelicans come through every year, and the sunrises off that water are something no other property around can offer. It was the only motel and RV park directly in Christmas Valley — the reason it had survived when everything else cycled through owners or closed.</p>
+        <p class="standout">It wasn't failing. It was waiting for a family to care about it.</p>
+      </div>
+    </div>
+    <div class="grid found-grid">
+      <figure class="photo-card fill reveal"><img src="assets/before-after-stack.jpg" alt="The Lakeside exterior, before and after"><span class="chip">The Lakeside — Before &amp; After</span></figure>
+      <figure class="photo-card fill reveal" style="--d:0.08s"><img src="assets/old-restaurant.jpg" alt="The old restaurant with its rock fireplace"><span class="chip">The Restaurant, 2020</span></figure>
+      <figure class="photo-card fill reveal" style="--d:0.16s"><img src="assets/old-room-floral.jpg" alt="An original motel room with floral bedspreads"><span class="chip">Room 7, Before</span></figure>
+      <figure class="photo-card fill reveal" style="--d:0.24s"><img src="assets/gutted-to-studs.jpg" alt="A room gutted to the studs with fresh insulation"><span class="chip">Gutted to the Studs</span></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 4 — WHAT WE BUILT ============ -->
+<section class="section" id="built">
+  <div class="wrap">
+    <div class="narrow center">
+      <p class="eyebrow reveal">2020–2022 — The Family Rebuild</p>
+      <h2 class="reveal" style="--d:0.1s;margin-top:22px;">Gutted to the studs. Rebuilt <em>together</em>.</h2>
+      <div class="body-copy reveal" style="--d:0.18s;margin-top:36px;">
+        <p>The very first day we owned it, we walked into the restaurant and gutted it. Completely. Sheetrock off, new insulation, new flooring — remodeled top to bottom in about a month and a half. My grandpa hand-painted trim for hours. My sister Emily led the design and picked out the chandeliers. Those ugly red beams went almost-black, and the whole room finally made sense. People who knew the old place would walk in and just say, &ldquo;Whoa.&rdquo;</p>
+      </div>
+    </div>
+    <div class="grid work-grid">
+      <figure class="photo-card fill reveal"><img src="assets/painting-beams-ladder.jpg" alt="Shelby painting the beams from a ladder"><span class="chip">The Beams</span></figure>
+      <figure class="photo-card fill reveal" style="--d:0.08s"><img src="assets/painting-ceiling.jpg" alt="Rolling paint on the peaked ceiling"><span class="chip">The Peaks</span></figure>
+      <figure class="photo-card fill reveal" style="--d:0.16s"><img src="assets/crew-gutted-room.jpg" alt="The family crew in a gutted room"><span class="chip">The Crew</span></figure>
+      <figure class="photo-card fill reveal" style="--d:0.24s"><img src="assets/kids-new-toilets.jpg" alt="The kids helping with the new toilets"><span class="chip">All Hands</span></figure>
+    </div>
+    <div class="narrow center">
+      <div class="body-copy reveal">
+        <p>Then we spent two years doing the same to the motel — every room gutted down to the studs and rebuilt from the floor up. In spring 2020 my parents repainted the entire exterior themselves, scraping loose paint by hand, borrowing a lift for the peaks. My mom texted me from the ladder:</p>
+      </div>
+    </div>
+    <div class="quote-block">
+      <p class="pullquote reveal">&ldquo;It's almost hot out here painting and we are <em>loving</em> it.&rdquo;</p>
+    </div>
+    <div class="narrow center">
+      <div class="body-copy reveal">
+        <p>The hardest work was the invisible kind. When we opened up the RV bathhouse we found rotted boards, hidden mold, and no ventilation — so we fixed what nobody would ever see, and added fans so it would stay fixed. When the drain field's old steel corroded in 2024, rebuilding it consumed most of that year's cash. We did it right anyway. That's the kind of place you're buying.</p>
+      </div>
+    </div>
+    <div class="payoff">
+      <figure class="photo-card big reveal"><img src="assets/dining-room-payoff.jpg" alt="The finished dining room — black beams and chandeliers"><span class="chip">The Dining Room — After</span></figure>
+      <figure class="photo-card small reveal" style="--d:0.1s"><img src="assets/crew-finished-dining.jpg" alt="The family crew in the finished dining room"><span class="chip">The Whoa Moment</span></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 5 — WHAT GUESTS SAY ============ -->
+<section class="section panel" id="guests">
+  <div class="wrap">
+    <div class="narrow center">
+      <p class="eyebrow reveal">1,300+ Feedback Cards and Reviews</p>
+      <h2 class="reveal" style="--d:0.1s;margin-top:22px;">Our guests kept the <em>receipts</em>.</h2>
+      <div class="body-copy reveal" style="--d:0.18s;margin-top:36px;">
+        <p>Across more than 1,300 feedback cards and reviews, 94% of guests rate their stay excellent or good. The number one thing they mention — over 400 times — is cleanliness: &ldquo;spotless,&rdquo; &ldquo;cleanest motel I've stayed in.&rdquo; Right behind it are the lake and the wildlife, and words like &ldquo;peaceful&rdquo; and &ldquo;serene.&rdquo; Nearly a third of our guests are repeat visitors.</p>
+      </div>
+    </div>
+    <div class="stats-block reveal">
+      <div><div class="num">94%</div><div class="lbl">Rate their stay excellent or good</div></div>
+      <div><div class="num">400+</div><div class="lbl">Mentions of cleanliness</div></div>
+      <div><div class="num">1 in 3</div><div class="lbl">Guests come back</div></div>
+    </div>
+    <div class="quotes-rotator reveal">
+      <div class="quote-slide active">
+        <p class="q">&ldquo;The oasis of well-manicured lawn surrounding all the sites was a pleasant surprise. We enjoyed a quiet night with full hook-ups and clean bathrooms at a reasonable price.&rdquo;</p>
+        <p class="attr">— Shelly E.</p>
+      </div>
+      <div class="quote-slide">
+        <p class="q">&ldquo;The view of the lake was beautiful, especially at sunset. It was quiet and peaceful.&rdquo;</p>
+        <p class="attr">— Morgan U.</p>
+      </div>
+      <div class="quote-slide">
+        <p class="q">&ldquo;The bed and pillows were amazing, I slept so well. The grounds were well maintained. Will definitely book again.&rdquo;</p>
+        <p class="attr">— Jenny S.</p>
+      </div>
+      <div class="quote-arrows">
+        <button id="qPrev" aria-label="Previous quote">&#8592;</button>
+        <button id="qNext" aria-label="Next quote">&#8594;</button>
+      </div>
+    </div>
+    <div class="grid guest-strip">
+      <figure class="photo-card fill reveal"><img src="assets/couple-dog-room3.jpg" alt="A couple and their dog outside Room 3"><span class="chip">Room 3</span></figure>
+      <figure class="photo-card fill reveal" style="--d:0.08s"><img src="assets/kids-geese-lake.jpg" alt="Kids feeding the geese at the lake"><span class="chip">The Morning Regulars</span></figure>
+      <figure class="photo-card fill reveal" style="--d:0.16s"><img src="assets/room-shiplap.jpg" alt="A remodeled room with shiplap and lake art"><span class="chip">Remodeled — Every Room</span></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 6 — HOW IT RUNS ============ -->
+<section class="section" id="runs">
+  <div class="wrap">
+    <div class="narrow center">
+      <p class="eyebrow reveal">The Operating System</p>
+      <h2 class="reveal" style="--d:0.1s;margin-top:22px;">It came with index cards. It leaves with a <em>manual</em>.</h2>
+      <div class="body-copy reveal" style="--d:0.18s;margin-top:36px;">
+        <p>When I took over in 2020, everything I was told about running this place fit on the back of a few index cards and an envelope. I turned that into a complete operating system: a 116-page manual covering the whole property, screen-recorded step-by-step walkthroughs, housekeeping checklists with room timers, a freeze protocol for hard winters, templated guest check-in texts, every vendor contact on one sheet — and an AI help desk trained on the Lakeside's operations. Type in a question about how anything works here, and it answers.</p>
+        <p>None of that is theoretical. The Lakeside runs on those systems today — the current on-site manager uses the manual every single day.</p>
+        <p>And the property is genuinely flexible. We ran it fully virtually for two years: guests booked online, got a check-in text with their lockbox code and WiFi password, and let themselves in. We never got one 3 a.m. lockout call, and check-in became our single highest-rated category. So a new owner gets a real choice — run it with people at the desk, run it virtually from anywhere, or blend the two. The systems support all three, because I built them on purpose.</p>
+      </div>
+    </div>
+    <div class="grid sys-cards">
+      <div class="sys-card reveal"><div class="lbl">The Manual</div><p>116 pages covering the whole property, used every single day.</p></div>
+      <div class="sys-card reveal" style="--d:0.08s"><div class="lbl">AI Help Desk</div><p>Type in a question about how anything works here, and it answers.</p></div>
+      <div class="sys-card reveal" style="--d:0.16s"><div class="lbl">Self Check-In</div><p>Lockbox codes by text — our single highest-rated category.</p></div>
+      <div class="sys-card reveal" style="--d:0.24s"><div class="lbl">SOP Library</div><p>Screen-recorded step-by-step walkthroughs for every task.</p></div>
+    </div>
+    <div class="grid vignette-strip">
+      <figure class="photo-card fill reveal"><img src="assets/boots-welcome-mat.jpg" alt="Boots on the welcome mat"><span class="chip">Welcome</span></figure>
+      <figure class="photo-card fill reveal" style="--d:0.08s"><img src="assets/letterboard-vignette.jpg" alt="Letterboard and flowers vignette"><span class="chip">The Details</span></figure>
+      <figure class="photo-card fill reveal" style="--d:0.16s"><img src="assets/guests-reading.jpg" alt="Guests reading on the bed"><span class="chip">Settled In</span></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 7 — WHAT IT COULD BE ============ -->
+<section class="section panel" id="couldbe">
+  <div class="wrap">
+    <div class="narrow center">
+      <p class="eyebrow reveal">The Unwritten Chapters</p>
+      <h2 class="reveal" style="--d:0.1s;margin-top:22px;">We proved what works. We left room for <em>imagination</em>.</h2>
+      <div class="body-copy reveal" style="--d:0.18s;margin-top:36px;">
+        <p>Every idea below has already earned money or been seriously explored here. None has ever gotten someone's full creative attention. That's the opportunity.</p>
+      </div>
+    </div>
+    <div class="grid idea-grid">
+      <div class="idea-card reveal">
+        <div class="img"><img src="assets/event-garlands.jpg" alt="Event dinner with garlands in the dining room"><span class="chip">Proven — 2024</span></div>
+        <div class="txt"><h3>The Event Center</h3><p>The remodeled restaurant building — vaulted ceilings, black beams, chandeliers, commercial kitchen — hosted a full wedding in 2024, plus corporate events, birthday dinners, and a retirement party. Rent it by the hour or day, with kitchen access included.</p></div>
+      </div>
+      <div class="idea-card reveal" style="--d:0.08s">
+        <div class="img"><img src="assets/rv-golden-hour.jpg" alt="RV park at golden hour"><span class="chip">70% Weekdays</span></div>
+        <div class="txt"><h3>The Contractor Trade</h3><p>Our data surprised us: over 70% of bookings are weekdays — road crews, BLM (they block-book every year), solar and excavation projects on months-long contracts. Nobody has ever marketed to this guest on purpose. The demand walks in on its own.</p></div>
+      </div>
+      <div class="idea-card reveal" style="--d:0.16s">
+        <div class="img"><img src="assets/branded-cups.jpg" alt="Lakeside branded coffee cups"><span class="chip">Equipment in Place</span></div>
+        <div class="txt"><h3>The Kitchen</h3><p>A commercial kitchen with equipment in place. Continental breakfast is served for guests today; catering, a food pop-up, or a leased kitchen are all proven or explored paths. Honest note: full restaurant service would mean fresh health-department permitting — we'll tell you exactly what that path looks like.</p></div>
+      </div>
+      <div class="idea-card reveal" style="--d:0.24s">
+        <div class="img"><img src="assets/dunes-motocross.jpg" alt="Motocross rider in the air over the sand dunes"><span class="chip">Room to Grow</span></div>
+        <div class="txt"><h3>Room to Grow</h3><p>Three inactive RV pads, expansion room in the drainfield zone, and channels we never fully opened — Airbnb has been discussed more than once and we think it's right.</p></div>
+      </div>
+      <div class="idea-card reveal" style="--d:0.32s">
+        <div class="img"><img src="assets/beams-detail.jpg" alt="Dining room beams detail"><span class="chip">Floated More Than Once</span></div>
+        <div class="txt"><h3>The Bunkhouse Idea</h3><p>A rustic bunkhouse conversion for hunters and work crews has been floated more than once. The remodeled shell and the location make it plausible.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 8 — THE SETTING ============ -->
+<section class="section" id="setting">
+  <div class="narrow center">
+    <p class="eyebrow reveal">The High Desert, Three Hours from Anywhere</p>
+    <h2 class="reveal" style="--d:0.1s;margin-top:22px;">The scenery photographs. The <em>feeling</em> doesn't.</h2>
+    <div class="body-copy reveal" style="--d:0.18s;margin-top:36px;">
+      <p>Photos can show you the lake, but they can't play you the sound of it — the geese and ducks guests wake up to, the pelicans that come through every year like an event. Christmas Valley is remote high desert and a genuine dark-sky area: almost no light pollution, stars people drive hours for.</p>
+      <p>You're minutes from Fort Rock and its cave where the Northern Paiute lived for thousands of years, near the Summer Lake Wildlife Area, and down the road from the Cowboy Dinner Tree, which sends us one-nighters all season. Sand dunes for off-roading. Crack in the Ground. The Lost Forest. Whether you're watching the sunset over the water or standing in the stillness after dark, there's something out here you have to stand in to understand.</p>
+    </div>
+  </div>
+  <figure class="full-bleed reveal" style="margin-top:80px;">
+    <img src="assets/milky-way-barn.jpg" alt="The Milky Way over a homestead barn — photo by Robert Petitt">
+    <span class="chip">Dark-Sky Country — Photo: Robert Petitt</span>
+  </figure>
+  <div class="wrap">
+    <div class="grid setting-grid">
+      <figure class="photo-card fill reveal"><img src="assets/fort-rock.jpg" alt="Fort Rock under a big cloudscape"><span class="chip">Fort Rock</span></figure>
+      <figure class="photo-card fill reveal" style="--d:0.08s"><img src="assets/crack-in-ground.jpg" alt="A hiker in Crack in the Ground"><span class="chip">Crack in the Ground</span></figure>
+      <figure class="photo-card fill reveal" style="--d:0.16s"><img src="assets/antelope-herd.jpg" alt="A herd of antelope in a field"><span class="chip">The Neighbors</span></figure>
+      <figure class="photo-card fill reveal" style="--d:0.24s"><img src="assets/cowboy-dinner-tree.jpg" alt="The Cowboy Dinner Tree storefront"><span class="chip">Cowboy Dinner Tree</span></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 9 — WHY WE'RE PASSING IT FORWARD ============ -->
+<section class="forward" id="forward">
+  <div class="narrow center">
+    <p class="eyebrow reveal">From Our Family to Yours</p>
+    <h2 class="reveal" style="--d:0.1s;margin-top:22px;">We finished what we came <em>to</em> do.</h2>
+    <div class="body-copy reveal" style="--d:0.18s;margin-top:40px;">
+      <p>In 2020, our family bought a tired property that everyone in town had circled and nobody had jumped on. We spent the years since restoring it building by building, and turning how-to-run-it knowledge that fit on a few index cards into a complete, documented operating system. The Lakeside today is clean, systematized, loved by its guests, and able to run staffed or virtually.</p>
+      <p>That was the work. And it's done.</p>
+      <p>Our family's season has changed — my parents are large-scale farmers with an operation that consumes them from spring dirt work through haying, and I've built a business of my own where my heart and energy live now. The Lakeside deserves owners whose next chapter it is.</p>
+      <p>I won't pretend it was easy. We set out buckets under a leaking roof our first winter. We made hard calls. But this place gave our family seven years of livelihood, taught me everything I know about running a business, and gave our guests — by their own words, over a thousand of them — a clean, peaceful place on the water they keep coming back to.</p>
+      <p>We're not walking away from something broken. We're handing forward something we finished — to whoever is ready to write the part we weren't meant to.</p>
+    </div>
+    <p class="sig reveal" style="--d:0.26s">— Shelby, for the whole family</p>
+  </div>
+</section>
+
+<!-- ============ SECTION 10 — BEGIN THE CONVERSATION ============ -->
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="narrow center">
+      <p class="eyebrow reveal">Seriously Interested?</p>
+      <h2 class="reveal" style="--d:0.1s;margin-top:22px;">Come stand on the <em>bank</em> and see.</h2>
+      <div class="body-copy reveal" style="--d:0.18s;margin-top:36px;">
+        <p>The full story is deeper than one page. Ask us anything: the property details, the systems, the numbers — financials are available to qualified buyers on request. Better yet, come stay a night and let the quiet make the argument.</p>
+      </div>
+    </div>
+    <div class="contact-split">
+      <form class="contact-form reveal" id="inquiryForm">
+        <label for="f-name">Name</label>
+        <input type="text" id="f-name" name="name" autocomplete="name">
+        <label for="f-email">Email</label>
+        <input type="email" id="f-email" name="email" autocomplete="email">
+        <label for="f-phone">Phone (optional)</label>
+        <input type="tel" id="f-phone" name="phone" autocomplete="tel">
+        <label for="f-msg">Tell us a little about what you're imagining</label>
+        <textarea id="f-msg" name="message"></textarea>
+        <button type="submit" class="btn">Start the Conversation</button>
+        <p class="form-thanks" id="formThanks">Thank you — we'll be in touch soon.</p>
+        <p class="contact-note">Or email us directly at [address TBD]</p>
+      </form>
+      <figure class="photo-card contact-photo reveal" style="--d:0.12s">
+        <img src="assets/lake-edge-dusk.jpg" alt="Standing at the lake edge at dusk">
+        <span class="chip">The Bank — Dusk</span>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <img class="goose" src="assets/logo-warm-white.png" alt="The Lakeside goose logo">
+  <div class="name">The Lakeside Motel &amp; RV Park</div>
+  <div class="addr">87275 Spruce Lane, Christmas Valley, OR 97641</div>
+  <div class="fnav">
+    <a href="#top">Home</a>
+    <a href="#" title="Coming soon">The Property</a>
+    <a href="#" title="Coming soon">How It Runs</a>
+    <a href="#" title="Coming soon">What It Could Be</a>
+    <a href="#" title="Coming soon">The Setting</a>
+    <a href="#contact">Details &amp; Contact</a>
+  </div>
+</footer>
+
+<script>
+// scroll reveal
+const io=new IntersectionObserver(es=>{
+  es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// mobile menu
+const ov=document.getElementById('menuOverlay');
+document.getElementById('menuBtn').addEventListener('click',()=>ov.classList.add('open'));
+document.getElementById('menuClose').addEventListener('click',()=>ov.classList.remove('open'));
+ov.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>ov.classList.remove('open')));
+// rotating guest quotes
+const slides=[...document.querySelectorAll('.quote-slide')];
+let qi=0,qt;
+function showQ(n){
+  slides[qi].classList.remove('active');
+  qi=(n+slides.length)%slides.length;
+  slides[qi].classList.add('active');
+}
+function autoQ(){qt=setInterval(()=>showQ(qi+1),7000);}
+document.getElementById('qPrev').addEventListener('click',()=>{clearInterval(qt);showQ(qi-1);autoQ();});
+document.getElementById('qNext').addEventListener('click',()=>{clearInterval(qt);showQ(qi+1);autoQ();});
+autoQ();
+// inquiry form (no backend yet — contact email TBD)
+document.getElementById('inquiryForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  document.getElementById('formThanks').style.display='block';
+});
+</script>
+</body>
+</html>
